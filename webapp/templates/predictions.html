@@ -1,0 +1,36 @@
+
+{% extends 'adminbase.html' %}
+{% block content %}
+
+
+
+<center>
+<font size="+1" color="red">{{msg}}
+<br><br><br>
+
+<font size="" color=""><h2>Select Algorithm</h2><br></font>
+
+<table>
+<form method="post" action="/naivetest/">
+	{% csrf_token %} 
+	<input type="submit" value="Naive Bayes Algorithm">
+</form>
+
+<form method="post" action="/nntest/">
+	{% csrf_token %} 
+	<input type="submit" value="MLP Classifier Algorithm">
+</form>
+
+<form method="post" action="/svmtest/">
+	{% csrf_token %} 
+	<input type="submit" value="SVM Algorithm">
+</form>
+
+<form method="post" action="/graphview/">
+	{% csrf_token %} 
+	<input type="submit"  value="Graph">
+</form>
+
+<br><br><br><br><br>	
+</table>
+{% endblock %}
